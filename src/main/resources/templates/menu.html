@@ -11,7 +11,12 @@
     <h2>My Profile</h2>
     <p th:text="${name}"></p>
     <p th:text="${#strings.capitalize(skintype)}"></p>
-    <p th:text="${#strings.capitalize(manipedi)}"></p>
+    <th:block th:if="${manicure == 'manicure'}">
+        <p th:text="${#strings.capitalize(manicure)}"></p>
+    </th:block>
+    <th:block th:if="${pedicure == 'pedicure'}">
+        <p th:text="${#strings.capitalize(pedicure)}"></p>
+    </th:block>
 </div>
 <div id="servicesMenu">
     <h1>Menu of Available Services</h1>
@@ -28,12 +33,12 @@
     </th:block>
 </div>
 <div id="manipedi">
-    <th:block th:if="${manipedi == 'manicure'}">
-        <h3 th:text="${#strings.capitalize(manipedi)}"></h3>
+    <th:block th:if="${manicure == 'manicure'}">
+        <h3 th:text="${#strings.capitalize(manicure)}"></h3>
         <p th:replace="fragments :: manicureDescription"></p>
     </th:block>
-    <th:block th:if="${manipedi == 'pedicure'}">
-        <h3 th:text="${#strings.capitalize(manipedi)}"></h3>
+    <th:block th:if="${pedicure == 'pedicure'}">
+        <h3 th:text="${#strings.capitalize(pedicure)}"></h3>
         <p th:replace="fragments :: pedicureDescription"></p>
     </th:block>
 </div>

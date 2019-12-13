@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th:"https://www.thymeleaf.org/>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
-    <title>$Title$</title>
+    <title>Spa Form</title>
 </head>
 <body>
-$END$
+<form method='post'>
+    inName: <br>
+    <input type='text' name='name'>
+    <br>Skin type: <br>
+    <select name='skintype'>
+        <option value='oily'>Oily</option>
+        <option value='combination'>Combination</option>
+        <option value='normal'>Normal</option>
+        <option value='dry'>Dry</option>
+    </select><br>
+    Manicure and/or Pedicure? <br>
+    <input type="checkbox" name="manicure" value="manicure">Manicure <br>
+    <input type="checkbox" name="pedicure" value="pedicure">Pedicure <br>
+    <input type='submit' value='Submit'>
+</form>
 </body>
 </html>
