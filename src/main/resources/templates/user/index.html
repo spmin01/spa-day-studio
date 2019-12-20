@@ -2,9 +2,10 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8"/>
-    <title>$Title$</title>
+    <title>User Dashboard</title>
 </head>
 <body>
-
+    <h2><span>Welcome </span><span th:text="${user.userName}"></span></h2>
+    <p><a th:href="@{/}">Make appointment?</a></p>
 </body>
 </html>
